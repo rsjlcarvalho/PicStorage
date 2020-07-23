@@ -1,4 +1,4 @@
-# alurapic
+# PicStorage
 
 > A Vue.js project
 
