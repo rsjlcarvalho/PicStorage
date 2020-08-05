@@ -4,7 +4,7 @@
     <input
       type="search"
       class="filtro"
-      v-on:input="filtro = $event.target.value"
+      @input="filtro = $event.target.value"
       placeholder="filtre por parte do título"
     />
     {{ filtro }}
