@@ -1,12 +1,9 @@
 <template>
-  <div class="corpo">
-  </div>
+  <div class="corpo"></div>
 </template>
 
 <script>
-export default {
-  
-};
+export default {};
 </script>
 
 <style>
