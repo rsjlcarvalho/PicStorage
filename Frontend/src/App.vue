@@ -1,5 +1,5 @@
 <template>
-  <div class="corpo"></div>
+  <div class="corpo"><router-view></router-view></div>
 </template>
 
 <script>
