@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1 class="centralizado">{{ titulo }}</h1>
+
+    <p v-show="mensagem" class="centralizado">{{mensagem}}</p>
+
     <input
       type="search"
       class="filtro"
@@ -42,6 +45,7 @@ export default {
       titulo: "PicStorage",
       fotos: [],
       filtro: "",
+      mensagem: ""
     };
   },
 
@@ -58,7 +62,11 @@ export default {
 
   methods: {
     remove(foto) {
-      alert("Remover a foto: " + foto.titulo);
+      this.$http.delete(`http://localhost:3000/v1/fotos/${foto._id}`)
+      .then(() => this.mensagem ="Foto removida com sucesso", err => {
+        console.log(err);
+        this.mensagem = "Não foi possível remover a foto";
+      });
     },
   },
 
